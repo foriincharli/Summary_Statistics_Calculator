@@ -1,5 +1,8 @@
 setwd("C:/Users/path/to/csv")
 
+# Make a data frame that has a 'State' column for each weather station ($Location) and has the 'Year', 'Month', and 'Date' in 
+# separate columns
+
 #### The libraries ####
 library(tidyverse)
 library(visdat)
@@ -34,5 +37,5 @@ df1 <- df1[c(1,2,25,3,4,5,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
 # split 'Date' into 'Year', 'Month' and 'Day'
 df1 <- separate(df1, "Date", c("Year", "Month", "Day"), sep = "-")
 
-# write new csv for posterity
+# write new csv
 write.csv(df1, "weather_extra.csv")
