@@ -1,3 +1,5 @@
+library(dplyr)
+
 #### Generate some summary statistics ####
 df2 <- df1 %>% 
   group_by(Year, State, Location) %>% 
